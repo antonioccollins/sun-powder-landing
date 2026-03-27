@@ -1,0 +1,61 @@
+/**
+ * Sun Powder Brand Colors
+ *
+ * Usage: Import this file and use CSS custom properties
+ * Example: color: var(--sp-orange);
+ */
+
+:root {
+  /* ===========================================
+     PRIMARY PALETTE
+     Main brand colors - use these most often
+     =========================================== */
+
+  /* Orange spectrum */
+  --sp-orange: #FF4000;
+  --sp-amber: #FF9C00;
+  --sp-cream: #FFF4E8;
+
+  /* Blue spectrum */
+  --sp-navy: #041C72;
+  --sp-dark-navy: #242E43;
+  --sp-light-blue: #EBF1FF;
+
+  /* ===========================================
+     COMPLEMENTARY PALETTE
+     Secondary colors - use sparingly for accents
+     =========================================== */
+
+  /* Blues */
+  --sp-comp-slate: #3A5489;
+  --sp-comp-cobalt: #0142AF;
+  --sp-comp-sky: #6594E1;
+  --sp-comp-periwinkle: #A7C5F7;
+
+  /* Greens & Yellows */
+  --sp-comp-lime: #92C64D;
+  --sp-comp-olive: #D2C643;
+  --sp-comp-gold: #FFD769;
+
+  /* Reds & Pinks */
+  --sp-comp-burgundy: #791B3B;
+  --sp-comp-coral: #D2766A;
+  --sp-comp-salmon: #FF5E5E;
+  --sp-comp-orchid: #CF9DDA;
+  --sp-comp-lavender: #DFC5F2;
+  --sp-comp-blush: #FFDFEA;
+  --sp-comp-ivory: #FFF6DE;
+
+  /* ===========================================
+     SEMANTIC ALIASES
+     Common use-case mappings
+     =========================================== */
+
+  --sp-primary: var(--sp-orange);
+  --sp-secondary: var(--sp-navy);
+  --sp-background-light: var(--sp-cream);
+  --sp-background-dark: var(--sp-dark-navy);
+  --sp-text-dark: var(--sp-dark-navy);
+  --sp-text-light: var(--sp-cream);
+  --sp-accent: var(--sp-amber);
+}

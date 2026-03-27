@@ -1,0 +1,74 @@
+/**
+ * Sun Powder Background Styles
+ *
+ * CSS approximations of brand backgrounds.
+ * Use these when you don't need the exact image files.
+ */
+
+:root {
+  /* ===========================================
+     BACKGROUND GRADIENTS
+     CSS approximations of the PNG backgrounds
+     =========================================== */
+
+  /* Navy with upper-right blue glow */
+  --sp-bg-navy-glow: radial-gradient(
+    ellipse 80% 60% at 70% 20%,
+    #1a4a9e 0%,
+    #041C72 50%,
+    #021452 100%
+  );
+
+  /* Orange with upper-center amber glow */
+  --sp-bg-orange-glow: radial-gradient(
+    ellipse 70% 50% at 50% 25%,
+    #FF9C00 0%,
+    #FF4000 60%,
+    #E63600 100%
+  );
+
+  /* Solid fallbacks */
+  --sp-bg-navy-solid: #041C72;
+  --sp-bg-orange-solid: #FF4000;
+  --sp-bg-cream-solid: #FFF4E8;
+  --sp-bg-light-blue-solid: #EBF1FF;
+}
+
+/* ===========================================
+   UTILITY CLASSES
+   =========================================== */
+
+/* Gradient backgrounds (CSS) */
+.sp-bg-navy-glow {
+  background: var(--sp-bg-navy-glow);
+}
+
+.sp-bg-orange-glow {
+  background: var(--sp-bg-orange-glow);
+}
+
+/* Image backgrounds (when exact match needed) */
+.sp-bg-navy-glow-img {
+  background: url('./navy-glow.png') center/cover no-repeat;
+}
+
+.sp-bg-orange-glow-img {
+  background: url('./orange-glow.png') center/cover no-repeat;
+}
+
+/* Solid backgrounds */
+.sp-bg-navy {
+  background-color: var(--sp-bg-navy-solid);
+}
+
+.sp-bg-orange {
+  background-color: var(--sp-bg-orange-solid);
+}
+
+.sp-bg-cream {
+  background-color: var(--sp-bg-cream-solid);
+}
+
+.sp-bg-light-blue {
+  background-color: var(--sp-bg-light-blue-solid);
+}

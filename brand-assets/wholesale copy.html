@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sun Powder — Wholesale Partner Program</title>
+
+  <style>
+    /* ── Brand font-face ─────────────────────────────────────── */
+    @font-face {
+      font-family: 'Sohne';
+      src: url('fonts/Sohne-Buch.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Sohne';
+      src: url('fonts/Sohne-BuchKursiv.otf') format('opentype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Sohne';
+      src: url('fonts/Sohne-Halbfett.otf') format('opentype');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Sohne';
+      src: url('fonts/Sohne-HalbfettKursiv.otf') format('opentype');
+      font-weight: 600;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Sohne Breit';
+      src: url('fonts/SohneBreit-Halbfett.otf') format('opentype');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Sohne Breit';
+      src: url('fonts/SohneBreit-Dreiviertelfett.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ── Design tokens ───────────────────────────────────────── */
+    :root {
+      --sp-orange:      #FF4000;
+      --sp-amber:       #FF9C00;
+      --sp-navy:        #041C72;
+      --sp-dark-navy:   #242E43;
+      --sp-cream:       #FFF4E8;
+      --sp-light-blue:  #EBF1FF;
+
+      --bg-white:       #FFFFFF;
+      --bg-light:       #F9F9F7;
+      --bg-warm:        #FAF6F1;
+      --bg-dark:        #0E1A2F;
+      --card-border:    rgba(4, 28, 114, 0.10);
+      --muted:          #6B7084;
+      --muted-light:    #9598A6;
+
+      --font-sans:      'Sohne', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      --font-breit:     'Sohne Breit', var(--font-sans);
+    }
+
+    /* ── Reset ───────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      color: var(--sp-dark-navy);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: var(--bg-white);
+    }
+
+    /* ── Shared ──────────────────────────────────────────────── */
+    .ws-section {
+      width: 100%;
+      padding: 6rem 2rem 7rem;
+    }
+
+    .ws-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .ws-label {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sp-orange);
+      margin-bottom: 1.25rem;
+    }
+
+    .ws-label--hero {
+      font-size: 0.875rem;
+      letter-spacing: 0.2em;
+      margin-bottom: 1.5rem;
+    }
+
+    .ws-headline {
+      font-family: var(--font-breit);
+      font-weight: 700;
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      line-height: 1.2;
+      color: var(--sp-navy);
+      margin-bottom: 1.5rem;
+      max-width: 700px;
+    }
+
+    .ws-subhead {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .ws-body {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--sp-dark-navy);
+      max-width: 560px;
+    }
+
+    .ws-body + .ws-body {
+      margin-top: 1rem;
+    }
+
+    .ws-body em {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--sp-navy);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECTION 1 — CREDIBILITY WALL
+       ════════════════════════════════════════════════════════════ */
+    .ws-credibility {
+      background: var(--bg-white);
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      text-align: center;
+    }
+
+    .ws-credibility .ws-headline {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ws-credibility .ws-subhead {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Founder cards */
+    .ws-founders {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 680px;
+      margin: 1.5rem auto 0;
+    }
+
+    .ws-founder-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .ws-founder-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.25rem;
+      filter: grayscale(15%);
+    }
+
+    .ws-founder-name {
+      font-family: var(--font-breit);
+      font-weight: 600;
+      font-size: 1.0625rem;
+      color: var(--sp-navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .ws-founder-role {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sp-orange);
+      margin-bottom: 0.75rem;
+    }
+
+    .ws-founder-bio {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    /* Practice row */
+    .ws-practices {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem 2rem;
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .ws-practice-logo {
+      height: 28px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.45;
+      filter: grayscale(100%);
+      transition: opacity 0.2s ease;
+    }
+
+    .ws-practice-logo:hover {
+      opacity: 0.7;
+    }
+
+    .ws-practice-name {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.8125rem;
+      color: var(--muted-light);
+      letter-spacing: 0.02em;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECTION 2 — WHY IT MOVES
+       ════════════════════════════════════════════════════════════ */
+    .ws-why {
+      background: var(--bg-light);
+    }
+
+    .ws-why-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 2.5rem;
+      align-items: start;
+    }
+
+    .ws-why-photo {
+      position: sticky;
+      top: 3rem;
+    }
+
+    .ws-why-photo-img {
+      width: 100%;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .ws-reasons {
+      margin-top: 0;
+    }
+
+    .ws-reason {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ws-reason:first-child {
+      border-top: 1px solid var(--card-border);
+    }
+
+    .ws-reason-title {
+      font-family: var(--font-breit);
+      font-weight: 600;
+      font-size: 1.0625rem;
+      color: var(--sp-navy);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    .ws-reason-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      color: var(--sp-navy);
+      opacity: 0.35;
+    }
+
+    .ws-reason .ws-body {
+      max-width: 640px;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECTION 3 — CLINICAL LEGITIMACY
+       ════════════════════════════════════════════════════════════ */
+    .ws-science {
+      background: var(--bg-warm);
+    }
+
+    .ws-science-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 2.5rem;
+      align-items: start;
+    }
+
+    .ws-study-callout {
+      background: var(--bg-white);
+      border: 1px solid var(--card-border);
+      border-radius: 4px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .ws-study-stat {
+      font-family: var(--font-breit);
+      font-weight: 700;
+      font-size: clamp(2.5rem, 5vw, 3.25rem);
+      color: var(--sp-navy);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .ws-study-stat-label {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.5;
+      max-width: 280px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .ws-study-meta {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted-light);
+    }
+
+    .ws-study-link {
+      display: inline-block;
+      margin-top: 2rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.8125rem;
+      color: var(--sp-orange);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .ws-study-link:hover {
+      border-color: var(--sp-orange);
+    }
+
+    .ws-study-callout--secondary {
+      margin-top: 1.25rem;
+      background: transparent;
+      border-style: dashed;
+    }
+
+    .ws-study-link::after {
+      content: ' \2192';
+    }
+
+    /* Ingredients grid */
+    .ws-ingredients-section {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .ws-ingredients-subhead {
+      font-family: var(--font-breit);
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--sp-navy);
+      margin-bottom: 2rem;
+      max-width: 520px;
+    }
+
+    .ws-ingredients-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .ws-ingredient {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ws-ingredient:nth-child(odd) {
+      border-right: 1px solid var(--card-border);
+    }
+
+    .ws-ingredient:nth-child(1),
+    .ws-ingredient:nth-child(2) {
+      border-top: 1px solid var(--card-border);
+    }
+
+    .ws-ingredient-name {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--sp-navy);
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .ws-ingredient-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .ws-ingredient-name span {
+      font-weight: 400;
+      color: var(--muted);
+      font-size: 0.8125rem;
+      margin-left: 0.35rem;
+    }
+
+    .ws-ingredient-desc {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .ws-small-note {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      color: var(--muted-light);
+      margin-top: 1.5rem;
+      max-width: 560px;
+    }
+
+    /* Trust badges */
+    .ws-trust-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ws-trust-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .ws-trust-badge + .ws-trust-badge::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 1px;
+      background: var(--card-border);
+    }
+
+    .ws-trust-icon {
+      width: 22px;
+      height: 22px;
+      color: var(--sp-navy);
+      opacity: 0.3;
+      flex-shrink: 0;
+    }
+
+    .ws-trust-label {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted-light);
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .ws-trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ws-trust-badge:nth-child(odd)::before {
+        display: none;
+      }
+
+      .ws-trust-badge:nth-child(n+3) {
+        border-top: 1px solid var(--card-border);
+      }
+
+      .ws-trust-badge:nth-child(3)::before,
+      .ws-trust-badge:nth-child(5)::before {
+        display: none;
+      }
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECTION 4 — ECONOMICS
+       ════════════════════════════════════════════════════════════ */
+    .ws-economics {
+      background: var(--bg-dark);
+      color: #FFFFFF;
+    }
+
+    .ws-economics .ws-label {
+      color: var(--sp-orange);
+    }
+
+    .ws-economics .ws-headline {
+      color: #FFFFFF;
+    }
+
+    /* Stat blocks */
+    .ws-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .ws-stat {
+      padding: 2.5rem 2rem;
+      position: relative;
+      text-align: center;
+    }
+
+    .ws-stat + .ws-stat::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1.5rem;
+      bottom: 1.5rem;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .ws-stat-value {
+      font-family: var(--font-breit);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      color: #FFFFFF;
+      letter-spacing: 0.02em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .ws-stat-unit {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .ws-stat-label {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sp-orange);
+      margin-top: 0.75rem;
+    }
+
+    .ws-stat--highlight {
+      background: #92C64D;
+      border-radius: 4px;
+    }
+
+    .ws-stat--highlight .ws-stat-value,
+    .ws-stat--highlight .ws-stat-unit,
+    .ws-stat--highlight .ws-stat-label {
+      color: var(--bg-dark);
+    }
+
+    /* How numbers work */
+    .ws-numbers {
+      margin-top: 3.5rem;
+    }
+
+    .ws-numbers .ws-subhead {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .ws-numbers-subhead {
+      font-family: var(--font-breit);
+      font-weight: 600;
+      font-size: 1.125rem;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+    }
+
+    .ws-numbers .ws-body {
+      color: rgba(255, 255, 255, 0.65);
+      max-width: 600px;
+    }
+
+    .ws-numbers .ws-body em {
+      color: #FFFFFF;
+    }
+
+    .ws-bullet-list {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+    }
+
+    .ws-bullet-list li {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.65);
+      padding: 0.5rem 0;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .ws-bullet-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .ws-bullet-list li em {
+      font-style: normal;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    /* Pricing table */
+    .ws-pricing-table {
+      margin-top: 2.5rem;
+      width: 100%;
+      max-width: 600px;
+      border-collapse: collapse;
+    }
+
+    .ws-pricing-table th {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+      text-align: left;
+      padding: 0.75rem 1rem 0.75rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .ws-pricing-table td {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.9375rem;
+      color: rgba(255, 255, 255, 0.75);
+      padding: 0.875rem 1rem 0.875rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .ws-pricing-table td:last-child {
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .ws-economics .ws-small-note {
+      color: rgba(255, 255, 255, 0.35);
+      margin-top: 2rem;
+    }
+
+    .ws-economics .ws-small-note a {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECTION 5 — HOW TO RECOMMEND
+       ════════════════════════════════════════════════════════════ */
+    .ws-recommend {
+      background: var(--bg-white);
+    }
+
+    .ws-recommend-intro {
+      margin-bottom: 2.5rem;
+    }
+
+    .ws-scripts {
+      margin-top: 0;
+    }
+
+    .ws-script {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ws-script:first-child {
+      border-top: 1px solid var(--card-border);
+    }
+
+    .ws-script-context {
+      font-family: var(--font-breit);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--sp-navy);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    .ws-script-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      color: var(--sp-navy);
+      opacity: 0.35;
+    }
+
+    .ws-script-quote {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--sp-dark-navy);
+      font-style: italic;
+      max-width: 600px;
+      padding-left: 1rem;
+      border-left: 2px solid var(--card-border);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECTION 6 — TESTIMONIAL
+       ════════════════════════════════════════════════════════════ */
+    .ws-testimonial {
+      background: var(--bg-light);
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .ws-quote-mark {
+      font-family: var(--font-breit);
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--sp-orange);
+      opacity: 0.3;
+      margin-bottom: 1rem;
+    }
+
+    .ws-quote-text {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: clamp(1.0625rem, 2vw, 1.25rem);
+      line-height: 1.8;
+      color: var(--sp-navy);
+      max-width: 660px;
+      margin: 0 auto 2rem;
+    }
+
+    .ws-quote-photo {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      display: block;
+    }
+
+    .ws-quote-author {
+      font-family: var(--font-breit);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--sp-navy);
+    }
+
+    .ws-quote-practice {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.8125rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECTION 7 — CTA / FORM
+       ════════════════════════════════════════════════════════════ */
+    .ws-cta {
+      background: var(--bg-warm);
+      text-align: center;
+    }
+
+    .ws-cta .ws-headline {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ws-cta .ws-subhead {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3rem;
+    }
+
+    .ws-form {
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .ws-form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .ws-form-label {
+      display: block;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sp-dark-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .ws-form-label .ws-optional {
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--muted-light);
+      font-size: 0.75rem;
+    }
+
+    .ws-form-input,
+    .ws-form-select {
+      width: 100%;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.9375rem;
+      color: var(--sp-dark-navy);
+      background: var(--bg-white);
+      border: 1px solid var(--card-border);
+      border-radius: 4px;
+      padding: 0.8rem 1rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+      -webkit-appearance: none;
+    }
+
+    .ws-form-input:focus,
+    .ws-form-select:focus {
+      border-color: var(--sp-navy);
+    }
+
+    .ws-form-input::placeholder {
+      color: var(--muted-light);
+    }
+
+    .ws-form-select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%239598A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
+
+    .ws-form-button {
+      width: 100%;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      background: var(--sp-orange);
+      border: none;
+      border-radius: 4px;
+      padding: 1rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: background 0.2s ease;
+    }
+
+    .ws-form-button:hover {
+      background: #E63800;
+    }
+
+    .ws-form-footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.8125rem;
+      color: var(--muted-light);
+    }
+
+    .ws-form-footer a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--card-border);
+      transition: color 0.2s ease;
+    }
+
+    .ws-form-footer a:hover {
+      color: var(--sp-navy);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       RESPONSIVE
+       ════════════════════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .ws-section {
+        padding: 4rem 1.5rem 5rem;
+      }
+
+      .ws-founders {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        gap: 0;
+        margin-top: 1.5rem;
+      }
+
+      .ws-founder-card {
+        padding: 1.25rem 1.5rem;
+      }
+
+      .ws-why-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .ws-why-placeholder {
+        position: static;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+
+      .ws-science-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .ws-ingredients-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ws-ingredient:nth-child(odd) {
+        border-right: none;
+      }
+
+      .ws-ingredient:nth-child(2) {
+        border-top: none;
+      }
+
+      .ws-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .ws-stat + .ws-stat::before {
+        display: none;
+      }
+
+      .ws-stat {
+        padding: 2rem 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .ws-stat:last-child {
+        border-bottom: none;
+      }
+
+      .ws-practices {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+        justify-items: center;
+      }
+
+      .ws-trust-row {
+        gap: 1rem;
+      }
+
+      .ws-testimonial {
+        padding: 4rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 1 — CREDIBILITY WALL
+       ════════════════════════════════════════════════════════════ -->
+  <section class="ws-section ws-credibility">
+    <div class="ws-inner">
+      <p class="ws-label ws-label--hero">Wholesale Partner Program</p>
+      <h1 class="ws-headline">
+        Now Recommended by Dermatologists and Stocked in Leading Practices Nationwide
+      </h1>
+      <p class="ws-subhead">
+        Sun Powder is the first oral skin defense formula created by
+        board-certified dermatologists and backed by peer-reviewed
+        clinical research. It's already in 100+ practices across the country.
+      </p>
+
+      <!-- Founder cards -->
+      <div class="ws-founders">
+        <div class="ws-founder-card">
+          <img
+            src="Teo-Mike-Headshots/DrTeoSoleymaniHeadshot.png"
+            alt="Dr. Teo Soleymani"
+            class="ws-founder-photo"
+          >
+          <p class="ws-founder-name">Dr. Teo Soleymani, MD</p>
+          <p class="ws-founder-role">Co-Founder</p>
+          <p class="ws-founder-bio">
+            Mohs Skin Cancer &amp; Micrographic<br>
+            Reconstructive Surgery<br>
+            Stanford-Trained
+          </p>
+        </div>
+        <div class="ws-founder-card">
+          <img
+            src="Teo-Mike-Headshots/DrMichaelAbroukHeadshot.png"
+            alt="Dr. Michael Abrouk"
+            class="ws-founder-photo"
+          >
+          <p class="ws-founder-name">Dr. Michael Abrouk, MD</p>
+          <p class="ws-founder-role">Co-Founder</p>
+          <p class="ws-founder-bio">
+            Laser, Cosmetic &amp; Dermatologic Surgery<br>
+            Harvard-Trained
+          </p>
+        </div>
+      </div>
+
+      <!-- Practice logos -->
+      <div class="ws-practices">
+        <img src="logos/practice-dermatology-collective.png" alt="The Dermatology Collective" class="ws-practice-logo">
+        <span class="ws-practice-name">Skin Innovations</span>
+        <img src="logos/practice-skin-associates-fl.png" alt="Skin Associates Florida" class="ws-practice-logo">
+        <img src="logos/practice-oak-dermatology.webp" alt="Oak Dermatology" class="ws-practice-logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 2 — WHY IT MOVES
+       ════════════════════════════════════════════════════════════ -->
+  <section class="ws-section ws-why">
+    <div class="ws-inner">
+      <p class="ws-label">For Your Practice</p>
+      <h2 class="ws-headline">Why Practices Choose Sun Powder</h2>
+
+      <div class="ws-why-layout">
+        <div class="ws-reasons">
+        <div class="ws-reason">
+          <p class="ws-reason-title"><svg class="ws-reason-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Expands the prevention conversation.</p>
+          <p class="ws-body">
+            Most practices focus on treatment and correction. Sun Powder
+            gives you a daily-use product that keeps patients engaged
+            between visits. It turns a one-time appointment into an
+            ongoing skin health protocol.
+          </p>
+        </div>
+        <div class="ws-reason">
+          <p class="ws-reason-title"><svg class="ws-reason-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>Recurring demand without recurring effort.</p>
+          <p class="ws-body">
+            65% of Sun Powder customers are on monthly subscription.
+            Once a patient starts, they tend to stay. That's recurring
+            revenue from a single recommendation.
+          </p>
+        </div>
+        <div class="ws-reason">
+          <p class="ws-reason-title"><svg class="ws-reason-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>Zero friction to stock.</p>
+          <p class="ws-body">
+            No refrigeration. 24-month shelf life. Compact footprint.
+            Two SKUs: Melon Sunrise and Unflavored. It sits on a shelf
+            and sells through conversation, not merchandising.
+          </p>
+        </div>
+        <div class="ws-reason">
+          <p class="ws-reason-title"><svg class="ws-reason-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Designed to complement your treatments.</p>
+          <p class="ws-body">
+            Sun Powder was built as an oral companion to laser, light,
+            and aesthetic procedures. It supports skin resilience before
+            and after treatments, giving your patients better outcomes
+            and a reason to keep investing in their skin.
+          </p>
+        </div>
+        </div>
+        <div class="ws-why-photo">
+          <img src="product-shots/product-in-clinic.jpg" alt="Sun Powder in a dermatology practice" class="ws-why-photo-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 3 — CLINICAL LEGITIMACY
+       ════════════════════════════════════════════════════════════ -->
+  <section class="ws-section ws-science">
+    <div class="ws-inner">
+      <p class="ws-label">The Science</p>
+      <h2 class="ws-headline">Peer-Reviewed. Published. Not Marketing Claims.</h2>
+
+      <div class="ws-science-grid">
+        <div>
+          <p class="ws-body">
+            Sun Powder's formula was tested in a controlled clinical
+            trial and the results were published in a peer-reviewed
+            medical journal.
+          </p>
+          <p class="ws-body">
+            The preliminary study found that <em>100% of participants</em>
+            experienced a measurable reduction in UV-induced skin redness.
+            Treated participants also showed significant improvement across
+            five skin metrics: dryness, moisture content, roughness,
+            elasticity, and fine lines.
+          </p>
+          <p class="ws-body">
+            This is not a white paper or an internal study. It's published,
+            peer-reviewed research available for independent review.
+          </p>
+          <a href="https://athenaeumpub.com/novel-oral-supplement-protects-against-acute-erythema-from-cutaneous-uv-exposure-and-increases-minimal-erythema-dose-2/" class="ws-study-link" target="_blank" rel="noopener">Read the published study</a>
+        </div>
+        <div>
+          <div class="ws-study-callout">
+            <p class="ws-study-stat">100%</p>
+            <p class="ws-study-stat-label">
+              of participants experienced a measurable
+              reduction in UV-induced skin redness
+            </p>
+            <p class="ws-study-meta">Peer-Reviewed Clinical Trial</p>
+          </div>
+          <div class="ws-study-callout ws-study-callout--secondary">
+            <p class="ws-study-stat">55%</p>
+            <p class="ws-study-stat-label">
+              reduction in new non-melanoma skin cancers
+              in high-risk patients taking nicotinamide
+            </p>
+            <p class="ws-study-meta">JAMA Dermatology</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ingredients -->
+      <div class="ws-ingredients-section">
+        <h3 class="ws-ingredients-subhead">
+          8 Clinically Studied Ingredients. Clinical Doses. No Filler.
+        </h3>
+        <div class="ws-ingredients-grid">
+          <div class="ws-ingredient">
+            <p class="ws-ingredient-name"><i class="ws-ingredient-dot" style="background:#FF9C00"></i>Nicotinamide <span>1,000 mg</span></p>
+            <p class="ws-ingredient-desc">Supports DNA repair after UV exposure</p>
+          </div>
+          <div class="ws-ingredient">
+            <p class="ws-ingredient-name"><i class="ws-ingredient-dot" style="background:#92C64D"></i>Polypodium Leucotomos <span>240 mg</span></p>
+            <p class="ws-ingredient-desc">Used for decades in dermatology to support UV resilience</p>
+          </div>
+          <div class="ws-ingredient">
+            <p class="ws-ingredient-name"><i class="ws-ingredient-dot" style="background:#D2766A"></i>Astaxanthin <span>4 mg</span></p>
+            <p class="ws-ingredient-desc">One of the most studied natural antioxidants for oxidative stress</p>
+          </div>
+          <div class="ws-ingredient">
+            <p class="ws-ingredient-name"><i class="ws-ingredient-dot" style="background:#FF5E5E"></i>Vitamin C <span>250 mg</span></p>
+            <p class="ws-ingredient-desc">Supports collagen integrity under UV exposure</p>
+          </div>
+          <div class="ws-ingredient">
+            <p class="ws-ingredient-name"><i class="ws-ingredient-dot" style="background:#A7C5F7"></i>L-Glutathione <span>50 mg</span></p>
+            <p class="ws-ingredient-desc">Supports antioxidant defense</p>
+          </div>
+          <div class="ws-ingredient">
+            <p class="ws-ingredient-name"><i class="ws-ingredient-dot" style="background:#D2C643"></i>Bovine Collagen Peptides <span>100 mg</span></p>
+            <p class="ws-ingredient-desc">Supports skin structure and elasticity</p>
+          </div>
+          <div class="ws-ingredient">
+            <p class="ws-ingredient-name"><i class="ws-ingredient-dot" style="background:#6594E1"></i>Hyaluronic Acid <span>25 mg</span></p>
+            <p class="ws-ingredient-desc">Supports skin hydration and barrier function</p>
+          </div>
+          <div class="ws-ingredient">
+            <p class="ws-ingredient-name"><i class="ws-ingredient-dot" style="background:#CF9DDA"></i>Inositol <span>1,000 mg</span></p>
+            <p class="ws-ingredient-desc">Supports cellular signaling and skin health</p>
+          </div>
+        </div>
+
+        <p class="ws-small-note">
+          Every ingredient is included at research-backed doses. No underdosed
+          proprietary blends. No trend-driven additions.
+        </p>
+
+        <div class="ws-trust-grid">
+          <div class="ws-trust-badge">
+            <svg class="ws-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            <span class="ws-trust-label">Third Party Tested</span>
+          </div>
+          <div class="ws-trust-badge">
+            <svg class="ws-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            <span class="ws-trust-label">Clinically Studied Ingredients</span>
+          </div>
+          <div class="ws-trust-badge">
+            <svg class="ws-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            <span class="ws-trust-label">Patent Pending</span>
+          </div>
+          <div class="ws-trust-badge">
+            <svg class="ws-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            <span class="ws-trust-label">Made in the USA</span>
+          </div>
+          <div class="ws-trust-badge">
+            <svg class="ws-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <span class="ws-trust-label">cGMP Facility</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 4 — ECONOMICS
+       ════════════════════════════════════════════════════════════ -->
+  <section class="ws-section ws-economics">
+    <div class="ws-inner">
+      <p class="ws-label">The Economics</p>
+      <h2 class="ws-headline">Built for Practice Revenue.</h2>
+
+      <!-- Stat blocks -->
+      <div class="ws-stats">
+        <div class="ws-stat">
+          <p class="ws-stat-value">$27</p>
+          <p class="ws-stat-unit">/ unit</p>
+          <p class="ws-stat-label">Wholesale Cost</p>
+        </div>
+        <div class="ws-stat">
+          <p class="ws-stat-value">$68</p>
+          <p class="ws-stat-unit">/ unit</p>
+          <p class="ws-stat-label">MSRP (Retail)</p>
+        </div>
+        <div class="ws-stat ws-stat--highlight">
+          <p class="ws-stat-value">$41</p>
+          <p class="ws-stat-unit">/ unit</p>
+          <p class="ws-stat-label">Your Margin</p>
+        </div>
+      </div>
+
+      <!-- How the numbers work -->
+      <div class="ws-numbers">
+        <h3 class="ws-numbers-subhead">How the Numbers Work</h3>
+        <ul class="ws-bullet-list">
+          <li>Each unit is a 30-day supply (one scoop per day)</li>
+          <li>Minimum order: 30 units</li>
+          <li>Average reorder cycle: monthly</li>
+          <li>Two SKUs: Melon Sunrise and Unflavored</li>
+          <li>65% of Sun Powder customers subscribe monthly</li>
+          <li>At 30 units/month, that's <em>$1,230 in additional monthly revenue</em> from a single shelf product</li>
+        </ul>
+
+        <!-- Bulk pricing table -->
+        <table class="ws-pricing-table">
+          <thead>
+            <tr>
+              <th>Order Size</th>
+              <th>Wholesale Price</th>
+              <th>Your Margin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>30 &ndash; 59 units</td>
+              <td>$27 / unit</td>
+              <td>$41</td>
+            </tr>
+            <tr>
+              <td>60 &ndash; 99 units</td>
+              <td>$25 / unit</td>
+              <td>$43</td>
+            </tr>
+            <tr>
+              <td>100+ units</td>
+              <td>$22 / unit</td>
+              <td>$46</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="ws-small-note">
+          All orders ship direct. No distributor required. Reorders can be
+          placed via email at <a href="mailto:orders@drinksunpowder.com">orders@drinksunpowder.com</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 5 — HOW TO RECOMMEND
+       ════════════════════════════════════════════════════════════ -->
+  <section class="ws-section ws-recommend">
+    <div class="ws-inner">
+      <p class="ws-label">In Your Practice</p>
+      <h2 class="ws-headline">How Practices Are Introducing Sun Powder to Patients</h2>
+
+      <p class="ws-body ws-recommend-intro">
+        The most effective recommendations happen naturally, during
+        conversations you're already having about sun protection,
+        post-procedure care, or long-term skin health.
+      </p>
+
+      <div class="ws-scripts">
+        <div class="ws-script">
+          <p class="ws-script-context"><svg class="ws-script-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>After laser or light treatments</p>
+          <p class="ws-script-quote">
+            "I'm going to recommend a daily supplement that supports your
+            skin's recovery and helps maintain your results. It was developed
+            by dermatologists for patients like you."
+          </p>
+        </div>
+        <div class="ws-script">
+          <p class="ws-script-context"><svg class="ws-script-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></svg>During annual skin checks</p>
+          <p class="ws-script-quote">
+            "You're doing the right things with sunscreen, but there's a
+            gap in protection that topicals can't reach. This works from
+            the inside to support your skin against cumulative UV exposure."
+          </p>
+        </div>
+        <div class="ws-script">
+          <p class="ws-script-context"><svg class="ws-script-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>For patients concerned about aging</p>
+          <p class="ws-script-quote">
+            "The spots and texture changes you're seeing started years ago.
+            Sunscreen helps going forward, but this supplement supports your
+            skin at the cellular level where the damage is actually happening."
+          </p>
+        </div>
+      </div>
+
+      <p class="ws-small-note" style="margin-top: 2.5rem;">
+        We're currently developing shelf talkers, staff training guides,
+        and digital education materials for partner practices. If you'd
+        like early access to these resources, let us know when you get in touch.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 6 — TESTIMONIAL
+       ════════════════════════════════════════════════════════════ -->
+  <section class="ws-testimonial">
+    <div class="ws-inner">
+      <div class="ws-quote-mark">&ldquo;</div>
+      <p class="ws-quote-text">
+        Sun Powder is one of the most important breakthroughs in daily
+        sun protection. It's a science-backed blend designed by
+        dermatologists to help protect and repair skin from UV-related
+        damage while supporting overall skin health. Sun Powder is the
+        daily supplement I personally use and confidently recommend to
+        my patients.
+      </p>
+      <img src="Teo-Mike-Headshots/DrChrisTomassianHeadshot.jpg" alt="Dr. Chris Tomassian" class="ws-quote-photo">
+      <p class="ws-quote-author">Dr. Chris Tomassian</p>
+      <p class="ws-quote-practice">The Dermatology Collective</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 7 — CTA / FORM
+       ════════════════════════════════════════════════════════════ -->
+  <section class="ws-section ws-cta">
+    <div class="ws-inner">
+      <h2 class="ws-headline" style="text-align: center;">
+        Request Wholesale Pricing and Terms
+      </h2>
+      <p class="ws-subhead" style="text-align: center;">
+        We'll send you a full pricing sheet, order form, and next steps
+        within 24 hours.
+      </p>
+
+      <a href="mailto:orders@drinksunpowder.com?subject=Wholesale%20Inquiry&body=Practice%20Name%3A%0AYour%20Name%3A%0AEstimated%20Starting%20Order%3A%0A" class="ws-form-button" style="display:inline-block; text-align:center; text-decoration:none; max-width:480px; margin:0 auto;">Request Information</a>
+
+      <p class="ws-form-footer">
+        or email us directly at
+        <a href="mailto:orders@drinksunpowder.com">orders@drinksunpowder.com</a>
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+/**
+ * Sun Powder Typography
+ *
+ * Font families:
+ * - Sohne: Body text, subheads, descriptors, buttons
+ * - Sohne Breit: Headlines
+ * - Sohne Mono: Code/monospace (if needed)
+ */
+
+/* ===========================================
+   FONT FACE DECLARATIONS
+   =========================================== */
+
+/* Sohne - Primary text font */
+@font-face {
+  font-family: 'Sohne';
+  src: url('./Sohne-Buch.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sohne';
+  src: url('./Sohne-BuchKursiv.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sohne';
+  src: url('./Sohne-Halbfett.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sohne';
+  src: url('./Sohne-HalbfettKursiv.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Sohne Breit - Headlines */
+@font-face {
+  font-family: 'Sohne Breit';
+  src: url('./SohneBreit-Halbfett.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sohne Breit';
+  src: url('./SohneBreit-Dreiviertelfett.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Sohne Mono - Code/monospace */
+@font-face {
+  font-family: 'Sohne Mono';
+  src: url('./SohneMono-Leicht.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===========================================
+   CSS CUSTOM PROPERTIES
+   =========================================== */
+
+:root {
+  --sp-font-body: 'Sohne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --sp-font-headline: 'Sohne Breit', 'Sohne', sans-serif;
+  --sp-font-mono: 'Sohne Mono', ui-monospace, monospace;
+}
+
+/* ===========================================
+   TYPOGRAPHY UTILITY CLASSES (optional)
+   =========================================== */
+
+/* Descriptor - all caps, letter-spaced */
+.sp-descriptor {
+  font-family: var(--sp-font-body);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Headline */
+.sp-headline {
+  font-family: var(--sp-font-headline);
+  font-weight: 700;
+}
+
+/* Subhead */
+.sp-subhead {
+  font-family: var(--sp-font-body);
+  font-weight: 600;
+}
+
+/* Body */
+.sp-body {
+  font-family: var(--sp-font-body);
+  font-weight: 400;
+}
+
+/* Button text */
+.sp-button {
+  font-family: var(--sp-font-body);
+  font-weight: 600;
+}
