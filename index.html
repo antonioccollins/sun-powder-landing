@@ -354,6 +354,59 @@
         <hr class="article__rule">
 
         <!-- Testimonials -->
+        <!-- Video Carousel -->
+        <div class="video-carousel">
+          <div class="video-carousel__track" id="videoTrack">
+            <div class="video-carousel__slide">
+              <div class="video-carousel__frame">
+                <span class="video-carousel__badge">✓ Verified Customer</span>
+                <video class="video-carousel__video" controls playsinline>
+                  <source src="brand-assets/videos/karen-vid.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="video-carousel__slide">
+              <div class="video-carousel__frame">
+                <span class="video-carousel__badge">✓ Verified Customer</span>
+                <video class="video-carousel__video" controls playsinline>
+                  <source src="brand-assets/videos/sarah-vid.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="video-carousel__slide">
+              <div class="video-carousel__frame">
+                <span class="video-carousel__badge">✓ Verified Customer</span>
+                <video class="video-carousel__video" controls playsinline>
+                  <source src="brand-assets/videos/lady 3.MP4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="video-carousel__controls">
+            <button class="video-carousel__btn" id="videoPrev" onclick="moveCarousel(-1)">&#8592;</button>
+            <div class="video-carousel__dots">
+              <span class="video-carousel__dot active" onclick="goToSlide(0)"></span>
+              <span class="video-carousel__dot" onclick="goToSlide(1)"></span>
+              <span class="video-carousel__dot" onclick="goToSlide(2)"></span>
+            </div>
+            <button class="video-carousel__btn" id="videoNext" onclick="moveCarousel(1)">&#8594;</button>
+          </div>
+        </div>
+        <script>
+          var currentSlide = 0;
+          function goToSlide(n) {
+            currentSlide = n;
+            document.getElementById('videoTrack').style.transform = 'translateX(-' + (n * 100) + '%)';
+            document.querySelectorAll('.video-carousel__dot').forEach(function(d, i) {
+              d.classList.toggle('active', i === n);
+            });
+          }
+          function moveCarousel(dir) {
+            var total = 3;
+            goToSlide((currentSlide + dir + total) % total);
+          }
+        </script>
+
         <h2 class="article__section-head" id="testimonials">What Customers Report After 30–90 Days</h2>
 
         <p>The UV defense was the reason they built it. But customers started noticing something else first.</p>
