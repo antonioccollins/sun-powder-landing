@@ -645,7 +645,7 @@ body {
 }
 
 .article__formula-header {
-  padding: 1rem 1.25rem;
+  padding: 0.5rem 1.25rem;
 }
 
 .article__formula-category--defend .article__formula-header {
@@ -1512,4 +1512,68 @@ body {
     gap: 0.4rem;
     align-items: center;
   }
+}
+
+/* Legal Footer */
+.legal-footer {
+  background: #f5f4f1;
+  border-top: 1px solid #ddd;
+  padding: 2rem 1.5rem;
+  margin-top: 3rem;
+}
+
+.legal-footer__inner {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.legal-footer__inner p {
+  font-family: var(--serif);
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: #888;
+  margin: 0;
+}
+
+/* Before / After */
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.before-after__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.before-after__placeholder {
+  aspect-ratio: 4 / 5;
+  background: #e8e4dc;
+  border-radius: 8px;
+  border: 1px dashed #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.before-after__label-img {
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  color: #aaa;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.before-after__caption {
+  font-family: var(--serif);
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+  margin: 0;
 }
