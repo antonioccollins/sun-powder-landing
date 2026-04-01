@@ -90,4 +90,23 @@
     });
   });
 
+  /* ── Cross-Domain Query Parameter Passthrough ─
+     When a visitor arrives from a Meta ad, the URL contains tracking
+     params like ?fbclid=abc123. This snippet forwards those params to
+     every drinksunpowder.com CTA link so Meta attribution isn't lost
+     when the user crosses domains. Runs on DOMContentLoaded so all
+     links are in the DOM before we patch them. */
+  document.addEventListener('DOMContentLoaded', function () {
+    var search = window.location.search;
+    if (!search) return; // no params on this page — nothing to forward
+
+    var links = document.querySelectorAll('a[href*="drinksunpowder.com"]');
+    links.forEach(function (link) {
+      var href = link.getAttribute('href');
+      // Merge: if destination already has params use &, otherwise use ?
+      var separator = href.indexOf('?') !== -1 ? '&' : '?';
+      link.setAttribute('href', href + separator + search.slice(1));
+    });
+  });
+
 })();
